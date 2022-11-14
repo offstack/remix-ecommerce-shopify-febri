@@ -3,11 +3,11 @@ import { createSwrRedisCache } from "./models/request-response-caches/swr-redis-
 
 import redisClient from "./redis.server";
 
-if (!process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN) {
-  throw new Error(
-    "SHOPIFY_STOREFRONT_ACCESS_TOKEN environment variable is not set"
-  );
-}
+// if (!process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN) {
+//   throw new Error(
+//     "SHOPIFY_STOREFRONT_ACCESS_TOKEN environment variable is not set"
+//   );
+// }
 
 let commerce = createShopifyProvider({
   shop:'mugens',
