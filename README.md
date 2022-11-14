@@ -30,7 +30,7 @@ skip this step if you already did this
 
 ## Development    
 - Run redis image on your docker
-=
+
 From your terminal remix project:
 ```sh
 docker compose up -d
