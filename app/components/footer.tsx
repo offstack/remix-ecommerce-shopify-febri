@@ -47,7 +47,8 @@ export function Footer({
           </div>
         </div>
         <ul className="max-w-lg mr-auto flex-1 grid gap-4 md:grid-rows-4 md:grid-flow-col mb-6">
-          {pages.map((page) => (
+          {pages?.length ?
+          pages.map((page) => (
             <li key={page.id}>
               <Link
                 className="focus:text-gray-300 hover:text-gray-300"
@@ -57,7 +58,8 @@ export function Footer({
                 {page.title}
               </Link>
             </li>
-          ))}
+          ))
+          :null}
         </ul>
         <div>
           <div className="flex items-center">
