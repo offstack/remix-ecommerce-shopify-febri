@@ -10,8 +10,8 @@ if (!process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN) {
 }
 
 let commerce = createShopifyProvider({
-  shop: process.env.SHOPIFY_STORE!,
-  storefrontAccessToken: process.env.SHOPIFY_STOREFRONT_ACCESS_TOKEN,
+  shop:'mugens',
+  storefrontAccessToken: '84a1a27543ee2d1d28d64c22af2a18b7',
   maxAgeSeconds: 60,
   // cache: createSwrRedisCache({
   //   redisClient,
