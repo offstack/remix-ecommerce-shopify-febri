@@ -22,15 +22,17 @@ skip this step if you already did this
 
 - Install docker https://docs.docker.com/desktop/install/windows-install/ 
 ```sh
-*note: follow WSL2 configuration if you using Windows
+note: follow WSL2 configuration if you using Windows
 ```
 
 - Install redis https://hub.docker.com/_/redis
 
 
-## Development    
+## Development   
+
 - Run redis image on your docker
 
+- Start and run your entire app.
 From your terminal remix project:
 ```sh
 docker compose up -d
