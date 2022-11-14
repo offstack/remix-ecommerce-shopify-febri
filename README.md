@@ -36,8 +36,8 @@ note: follow WSL2 configuration if you using Windows
 From your terminal remix project:
 ```sh
 docker compose up -d
-```
 ![docker-compose](docker-compose.png)
+```
 
 ```sh
 npm run dev
