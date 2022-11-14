@@ -8,9 +8,9 @@ import type {
 import { validateLanguage } from "./models/language";
 import type { Language } from "./models/language";
 
-if (!process.env.ENCRYPTION_KEY) {
-  throw new Error("ENCRYPTION_KEY environment variable is not set");
-}
+// if (!process.env.ENCRYPTION_KEY) {
+//   throw new Error("ENCRYPTION_KEY environment variable is not set");
+// }
 
 let sessionStorage = createCookieSessionStorage({
   cookie: {
@@ -18,7 +18,7 @@ let sessionStorage = createCookieSessionStorage({
     httpOnly: true,
     path: "/",
     sameSite: "lax",
-    secrets: [process.env.ENCRYPTION_KEY],
+    secrets: ['rofl1234'],
   },
 });
 
