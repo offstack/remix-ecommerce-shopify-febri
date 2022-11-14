@@ -5,7 +5,6 @@ node_modules
 /build
 /public/build
 /app/styles/global.css
-.env
 
 /cypress/videos
 /cypress/screenshots
