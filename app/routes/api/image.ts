@@ -5,21 +5,17 @@ import { sharpTransformer } from "remix-image-sharp";
 export function loader({ request }: LoaderArgs) {
   let url = new URL("/", request.url);
 
-  try {
-    return imageLoader(
-      {
-        selfUrl: url.href,
-        cache: new DiskCache({
-          path: ".cache/images",
-        }),
-        resolver: async (asset, url, options, basePath) => {
-          return await fetchResolver(asset, url, options, basePath);
-        },
-        transformer: sharpTransformer,
+  return imageLoader(
+    {
+      selfUrl: url.href,
+      cache: new DiskCache({
+        path: ".cache/images",
+      }),
+      resolver: async (asset, url, options, basePath) => {
+        return await fetchResolver(asset, url, options, basePath);
       },
-      request
-    );
-  } catch (error) {
-    console.log("🚀 ~ file: image.ts ~ line 23 ~ loader ~ error", error)
-  }
+      transformer: sharpTransformer,
+    },
+    request
+  );
 }
