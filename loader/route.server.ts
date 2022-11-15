@@ -93,7 +93,7 @@ export let loader: LoaderFunction = async ({ request }) => {
       status = imageResponse.status;
     }
 
-    if (!imageBody) {
+    if (!imageBody?.pipe) {
       return badImageResponse();
     }
 
