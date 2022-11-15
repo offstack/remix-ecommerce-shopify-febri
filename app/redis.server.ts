@@ -1,12 +1,12 @@
-// import { createClient } from "redis";
+import { createClient } from "redis";
 
 // if (!process.env.REDIS_URL) {
 //   throw new Error("REDIS_URL environment variable is not set");
 // }
 
-// declare global {
-//   var redisClient: ReturnType<typeof createClient>;
-// }
+declare global {
+  var redisClient: ReturnType<typeof createClient>;
+}
 
 let redisClient = (global.redisClient =
   global.redisClient ||
