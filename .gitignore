@@ -1,7 +1,7 @@
 .DS_Store
 node_modules
-.cahce
 
+/.cache
 /build
 /public/build
 /app/styles/global.css
