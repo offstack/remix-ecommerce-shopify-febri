@@ -6,7 +6,7 @@ ENV PORT=8080
 # install all node_modules, including dev
 FROM base as deps
 
-RUN mkdir /app/
+RUN mkdirp /app/
 WORKDIR /app/
 
 ADD package.json package-lock.json ./
@@ -30,7 +30,7 @@ RUN npm run build
 ## copy over assets required to run the app
 FROM base
 
-RUN mkdir /app/
+RUN mkdirp /app/
 WORKDIR /app/
 
 # ADD prisma .
